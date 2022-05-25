@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="amedia.FXMLDocumentController">
+   <bottom>
+      <VBox prefHeight="40.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="40.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleButtonAction" text="openfile" />
+                  <Button mnemonicParsing="false" onAction="#playvideo" text="play" />
+                  <Button mnemonicParsing="false" onAction="#pausevideo" text="pause" />
+                  <Button mnemonicParsing="false" onAction="#stopvideo" text="stop" />
+                  <Button mnemonicParsing="false" onAction="#slowervideo" text="&lt;&lt;&lt;" />
+                  <Button mnemonicParsing="false" onAction="#slowvideo" text="&lt;&lt;" />
+                  <Button mnemonicParsing="false" onAction="#fastvideo" text="&gt;&gt;" />
+                  <Button mnemonicParsing="false" onAction="#fastervideo" text="&gt;&gt;&gt;" />
+                  <Button mnemonicParsing="false" onAction="#exitvideo" text="exit" />
+                  <Slider fx:id="slider" prefHeight="24.0" prefWidth="175.0">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="10.0" right="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Slider>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaview" fitHeight="200.0" fitWidth="200.0" />
+            <Slider fx:id="seekslider" StackPane.alignment="BOTTOM_CENTER" />
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
